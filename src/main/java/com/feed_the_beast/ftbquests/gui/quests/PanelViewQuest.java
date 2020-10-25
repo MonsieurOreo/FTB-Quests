@@ -363,11 +363,11 @@ public class PanelViewQuest extends Panel
 	@Override
 	public void drawBackground(MatrixStack matrixStack, Theme theme, int x, int y, int w, int h)
 	{
+		theme.drawString(matrixStack, title, x + w / 2F, y + 4, ThemeProperties.QUEST_VIEW_TITLE.get(), Theme.CENTERED);
 		Color4I borderColor = ThemeProperties.QUEST_VIEW_BORDER.get();
 		Color4I.DARK_GRAY.withAlpha(120).draw(matrixStack, gui.getX(), gui.getY(), gui.width, gui.height);
 		Icon background = ThemeProperties.QUEST_VIEW_BACKGROUND.get();
 		background.draw(matrixStack, x, y, w, h);
-		theme.drawString(matrixStack, title, x + w / 2F, y + 4, ThemeProperties.QUEST_VIEW_TITLE.get(), Theme.CENTERED);
 		icon.draw(matrixStack, x + 2, y + 2, 12, 12);
 		borderColor.draw(matrixStack, x + 1, y + 15, w - 2, 1);
 	}
